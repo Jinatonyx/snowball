@@ -1,0 +1,24 @@
+# netlify.toml
+# Place this file in the ROOT of your project folder alongside index.html
+
+[build]
+  # Tells Netlify where your serverless functions live
+  functions = "netlify/functions"
+
+  # No build step needed — it's a single static HTML file
+  publish = "."
+
+[[headers]]
+  # Security headers for all pages
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  # Cache the HTML file briefly (1 hour) so users get updates promptly
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
