@@ -12,7 +12,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Snowball">
 <title>Snowball</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
@@ -30,7 +30,7 @@
   --health-orange:#C2570A;--health-orange2:#E07C2A;--health-orange-bg:rgba(194,87,10,0.07);--health-orange-border:rgba(194,87,10,0.25);
 }
 
-body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);min-height:100vh;font-size:16px;line-height:1.65;-webkit-text-size-adjust:100%;overscroll-behavior-y:contain;}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--ink);min-height:100vh;font-size:16px;line-height:1.8;-webkit-text-size-adjust:100%;overscroll-behavior-y:contain;}
 
 /* ── AUTH / LANDING ── */
 #authScreen{min-height:100vh;display:flex;align-items:stretch;background:radial-gradient(ellipse at 70% 20%,rgba(200,217,107,0.18) 0%,transparent 55%),radial-gradient(ellipse at 15% 85%,rgba(61,122,92,0.10) 0%,transparent 50%),var(--cream);}
@@ -38,25 +38,40 @@ body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);m
 .auth-hero{flex:1;display:flex;flex-direction:column;justify-content:center;padding:60px 64px;min-width:0;}
 .auth-hero-logo{display:flex;align-items:center;gap:12px;margin-bottom:52px;}
 .auth-hero-logo-icon{width:40px;height:40px;flex-shrink:0;}
-.auth-hero-logo-text{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);letter-spacing:-0.02em;}
-.auth-slogan{font-family:'DM Serif Display',serif;font-size:clamp(42px,5.5vw,76px);color:var(--ink);line-height:1.06;letter-spacing:-0.03em;margin-bottom:28px;}
+.auth-hero-logo-text{font-family:'Playfair Display',serif;font-size:24px;color:var(--ink);letter-spacing:-0.02em;}
+.auth-slogan{font-family:'Playfair Display',serif;font-size:clamp(42px,5.5vw,76px);color:var(--ink);line-height:1.06;letter-spacing:-0.03em;margin-bottom:28px;}
 .auth-slogan em{color:var(--green);font-style:normal;}
 .auth-tagline{font-size:17px;color:var(--muted);line-height:1.65;max-width:380px;}
 .auth-quote{margin-top:36px;max-width:400px;}
-.auth-quote-text{font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);line-height:1.5;font-style:italic;opacity:0;animation:authHeroIn 0.6s 0.5s ease both;animation-fill-mode:both;}
+.auth-quote-text{font-family:'Playfair Display',serif;font-size:18px;color:var(--ink);line-height:1.5;font-style:italic;opacity:0;animation:authHeroIn 0.6s 0.5s ease both;animation-fill-mode:both;}
 .auth-quote-attr{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.08em;margin-top:10px;opacity:0;animation:authHeroIn 0.5s 0.7s ease both;animation-fill-mode:both;}
 .auth-hero-footer{margin-top:auto;padding-top:48px;font-family:'DM Mono',monospace;font-size:11px;color:var(--faint);letter-spacing:0.06em;}
+.auth-tagline{font-size:17px;color:var(--muted);line-height:1.7;max-width:400px;margin-bottom:32px;}
+.auth-subslogan{font-family:'Playfair Display',serif;font-size:clamp(18px,2.2vw,26px);font-weight:700;color:var(--ink);line-height:1.25;max-width:420px;margin-bottom:32px;letter-spacing:-0.01em;}
+.auth-subslogan{font-family:'Playfair Display',serif;font-size:clamp(16px,2vw,22px);font-weight:700;color:var(--ink);line-height:1.35;max-width:420px;margin-bottom:32px;letter-spacing:-0.01em;}
+.auth-pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px;}
+.auth-pill{display:inline-flex;align-items:center;gap:7px;padding:7px 14px;border:1px solid var(--border2);border-radius:99px;font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.03em;background:rgba(255,255,255,0.6);}
+.auth-pill-icon{font-size:13px;}
+.auth-mini-preview{margin-bottom:36px;background:rgba(255,255,255,0.55);border:1px solid var(--border);border-radius:14px;padding:18px 22px;max-width:380px;display:flex;gap:20px;align-items:center;}
+.auth-mini-stat{display:flex;flex-direction:column;gap:3px;}
+.auth-mini-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--faint);}
+.auth-mini-value{font-family:'Playfair Display',serif;font-size:22px;color:var(--ink);letter-spacing:-0.02em;line-height:1;}
+.auth-mini-delta{font-family:'DM Mono',monospace;font-size:10px;color:var(--green);margin-top:1px;}
+.auth-mini-divider{width:1px;height:44px;background:var(--border2);flex-shrink:0;}
+.auth-mini-markers{display:flex;flex-direction:column;gap:6px;}
+.auth-mini-marker{display:flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);}
+.auth-mini-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
 .auth-panel{width:420px;flex-shrink:0;display:flex;flex-direction:column;justify-content:center;padding:48px 44px;background:#fff;border-left:1px solid var(--border);min-height:100vh;}
 .auth-logo{display:none;}
 .auth-card{background:none;border:none;padding:0;box-shadow:none;width:100%;max-width:none;}
 .auth-tabs{display:flex;gap:0;margin-bottom:28px;background:var(--cream2);border-radius:10px;padding:4px;}
-.auth-tab{flex:1;padding:9px;border:none;background:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;color:var(--muted);cursor:pointer;transition:all 0.15s;}
+.auth-tab{flex:1;padding:9px;border:none;background:none;border-radius:8px;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:var(--muted);cursor:pointer;transition:all 0.15s;}
 .auth-tab.active{background:#fff;color:var(--ink);box-shadow:0 1px 6px rgba(0,0,0,0.08);}
 .field{margin-bottom:18px;}
 .field label{display:block;font-size:11px;font-weight:600;color:var(--muted);margin-bottom:6px;letter-spacing:0.06em;text-transform:uppercase;}
-.field input{width:100%;padding:12px 14px;border:1.5px solid var(--border2);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:15px;background:var(--cream);color:var(--ink);outline:none;transition:border-color 0.15s;}
+.field input{width:100%;padding:12px 14px;border:1.5px solid var(--border2);border-radius:10px;font-family:'Inter',sans-serif;font-size:15px;background:var(--cream);color:var(--ink);outline:none;transition:border-color 0.15s;}
 .field input:focus{border-color:var(--ink);background:#fff;}
-.auth-btn{width:100%;padding:14px;border:none;border-radius:10px;background:var(--ink);color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:background 0.15s;margin-top:4px;}
+.auth-btn{width:100%;padding:14px;border:none;border-radius:10px;background:var(--ink);color:#fff;font-family:'Inter',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:background 0.15s;margin-top:4px;}
 .auth-btn:hover{background:var(--ink2);}
 .auth-err{font-size:13px;color:var(--red);margin-top:10px;min-height:18px;}
 .auth-note{margin-top:16px;font-size:12px;color:var(--faint);text-align:center;}
@@ -105,9 +120,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);m
 .bell-option{display:flex;align-items:center;gap:9px;padding:8px 10px;border-radius:7px;cursor:pointer;transition:background 0.1s;font-size:13px;color:var(--ink);}
 .bell-option:hover{background:var(--cream);}
 .bell-option input[type=radio]{accent-color:var(--ink);cursor:pointer;width:14px;height:14px;}
-.bell-save{width:100%;margin-top:12px;padding:9px;border:none;border-radius:7px;background:var(--ink);color:#fff;font-size:13px;font-family:'DM Sans',sans-serif;font-weight:600;cursor:pointer;}
+.bell-save{width:100%;margin-top:12px;padding:9px;border:none;border-radius:7px;background:var(--ink);color:#fff;font-size:13px;font-family:'Inter',sans-serif;font-weight:600;cursor:pointer;}
 .bell-save:hover{background:var(--ink2);}
-.bell-off{width:100%;margin-top:6px;padding:7px;border:1.5px solid var(--border2);border-radius:7px;background:none;color:var(--muted);font-size:12px;font-family:'DM Sans',sans-serif;cursor:pointer;}
+.bell-off{width:100%;margin-top:6px;padding:7px;border:1.5px solid var(--border2);border-radius:7px;background:none;color:var(--muted);font-size:12px;font-family:'Inter',sans-serif;cursor:pointer;}
 .bell-off:hover{color:var(--red);border-color:var(--red);}
 @keyframes authUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 .auth-logo{animation:authUp 0.4s ease both;}
@@ -116,12 +131,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);m
 /* ── HEADER ── */
 #appScreen{display:none;}
 header{display:flex;align-items:center;justify-content:space-between;padding:20px 52px;background:var(--cream);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;}
-.logo{display:flex;align-items:center;gap:10px;font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);letter-spacing:-0.02em;}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Playfair Display',serif;font-size:24px;color:var(--ink);letter-spacing:-0.02em;}
 .logo-icon{width:32px;height:32px;flex-shrink:0;}
 .hdr-right{display:flex;align-items:center;gap:16px;}
 .hdr-user{font-size:13px;color:var(--muted);font-family:'DM Mono',monospace;}
 .hdr-greeting-wrap{display:flex;flex-direction:column;justify-content:center;}
-.hdr-greeting{font-family:'DM Serif Display',serif;font-size:17px;font-weight:700;color:var(--ink);letter-spacing:-0.01em;line-height:1.1;}
+.hdr-greeting{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--ink);letter-spacing:-0.01em;line-height:1.1;}
 .hdr-date{font-family:'DM Mono',monospace;font-size:12px;color:var(--faint);letter-spacing:0.06em;}
 .logout-btn{background:none;border:1.5px solid var(--border2);border-radius:8px;color:var(--muted);font-size:12px;font-family:'DM Mono',monospace;padding:7px 9px;cursor:pointer;transition:all 0.15s;display:flex;align-items:center;justify-content:center;width:36px;height:36px;}
 .logout-btn:hover{border-color:var(--red);color:var(--red);}
@@ -133,7 +148,7 @@ header{display:flex;align-items:center;justify-content:space-between;padding:20p
 /* ── NAV TABS ── */
 .hdr-left{display:flex;align-items:center;}
 .nav-tabs{display:flex;align-items:center;gap:2px;margin-left:24px;}
-.nav-tab{padding:6px 18px;border-radius:8px;font-size:14px;font-weight:500;color:var(--muted);cursor:pointer;background:none;border:none;font-family:'DM Sans',sans-serif;transition:all 0.18s;}
+.nav-tab{padding:6px 18px;border-radius:8px;font-size:14px;font-weight:500;color:var(--muted);cursor:pointer;background:none;border:none;font-family:'Inter',sans-serif;transition:all 0.18s;}
 .nav-tab:hover{color:var(--ink);background:var(--cream2);font-weight:600;}
 .nav-tab.active{color:#fff;background:var(--ink);font-weight:600;}
 #navProfile:hover{background:#E8E6E1;color:#4A4A46;}
@@ -147,7 +162,7 @@ header{display:flex;align-items:center;justify-content:space-between;padding:20p
 
 /* ── HEALTH TAB ── */
 .health-container{max-width:1440px;margin:0 auto;padding:44px 52px 100px;}
-.health-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border:none;border-radius:9px;background:var(--ink);color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:background 0.15s;}
+.health-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border:none;border-radius:9px;background:var(--ink);color:#fff;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:background 0.15s;}
 .health-btn:hover{background:var(--ink2);}
 /* Stats strip — exact match to wealth */
 /* Unit toggle */
@@ -160,22 +175,22 @@ header{display:flex;align-items:center;justify-content:space-between;padding:20p
 .hs-block{padding:30px 30px 26px;border:1.5px solid var(--border2);border-radius:var(--radius);background:#fff;box-shadow:var(--shadow);text-align:center;display:flex;flex-direction:column;}
 .hs-block.primary{border-color:var(--ink);border-width:2px;}
 .hs-block.flagged{border-color:var(--red);}
-.hs-lbl{font-family:'DM Serif Display',serif;font-size:16px;font-weight:700;color:var(--ink);letter-spacing:-0.01em;padding-bottom:12px;margin-bottom:20px;border-bottom:1.5px solid var(--border2);width:100%;text-align:center;}
-.hs-val{font-family:'DM Serif Display',serif;font-size:36px;color:var(--ink);line-height:1;letter-spacing:-0.02em;}
+.hs-lbl{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--ink);letter-spacing:-0.01em;padding-bottom:12px;margin-bottom:20px;border-bottom:1.5px solid var(--border2);width:100%;text-align:center;}
+.hs-val{font-family:'Playfair Display',serif;font-size:36px;color:var(--ink);line-height:1;letter-spacing:-0.02em;}
 .hs-block.primary .hs-val{font-size:clamp(34px,4vw,52px);color:var(--health-orange);}
 .hs-sub{font-size:11px;color:var(--muted);margin-top:8px;text-align:center;}
 /* Inline-editable personal stat */
 .hs-editable{cursor:text;border-bottom:1px dashed transparent;transition:border-color 0.15s;display:inline-block;min-width:40px;}
 .hs-editable:hover{border-bottom-color:var(--faint);}
-.hs-edit-inp{font-family:'DM Serif Display',serif;font-size:32px;color:var(--ink);line-height:1;letter-spacing:-0.02em;background:none;border:none;border-bottom:1.5px solid var(--ink);outline:none;width:100%;max-width:140px;}
-.hs-select{font-family:'DM Serif Display',serif;font-size:28px;color:var(--ink);background:none;border:none;border-bottom:1.5px dashed var(--border2);outline:none;cursor:pointer;padding:0;letter-spacing:-0.02em;width:auto;}
+.hs-edit-inp{font-family:'Playfair Display',serif;font-size:32px;color:var(--ink);line-height:1;letter-spacing:-0.02em;background:none;border:none;border-bottom:1.5px solid var(--ink);outline:none;width:100%;max-width:140px;}
+.hs-select{font-family:'Playfair Display',serif;font-size:28px;color:var(--ink);background:none;border:none;border-bottom:1.5px dashed var(--border2);outline:none;cursor:pointer;padding:0;letter-spacing:-0.02em;width:auto;}
 .hs-select:hover{border-bottom-color:var(--ink);}
 /* Trend chart modal */
 .trend-modal-ov{position:fixed;inset:0;background:rgba(28,28,26,0.45);display:flex;align-items:center;justify-content:center;z-index:999;opacity:0;pointer-events:none;transition:opacity 0.2s;}
 .trend-modal-ov.open{opacity:1;pointer-events:all;}
 .trend-modal{background:#fff;border-radius:var(--radius);padding:32px;width:min(640px,calc(100vw - 32px));box-shadow:var(--shadow-lg);transform:translateY(12px);transition:transform 0.2s;max-height:90vh;overflow-y:auto;}
 .trend-modal-ov.open .trend-modal{transform:translateY(0);}
-.trend-modal-title{font-family:'DM Serif Display',serif;font-size:22px;color:var(--ink);margin-bottom:4px;}
+.trend-modal-title{font-family:'Playfair Display',serif;font-size:22px;color:var(--ink);margin-bottom:4px;}
 .trend-modal-sub{font-size:12px;color:var(--muted);margin-bottom:24px;font-family:'DM Mono',monospace;}
 .trend-chart-wrap{width:100%;height:200px;position:relative;margin-bottom:20px;}
 .trend-type-btns{display:flex;gap:6px;margin-bottom:16px;}
@@ -203,16 +218,20 @@ header{display:flex;align-items:center;justify-content:space-between;padding:20p
 .health-cat-body{display:none;overflow-x:auto;-webkit-overflow-scrolling:touch;}
 .health-cat-section.open .health-cat-body{display:block;}
 /* Timeline table: rows=markers, columns=dates */
-.htable{width:100%;border-collapse:collapse;}
-.htable th{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);padding:12px 20px;text-align:right;border-bottom:1px solid var(--border);white-space:nowrap;font-weight:400;background:#fff;}
-.htable th.hth-marker{text-align:left;position:sticky;left:0;background:#fff;z-index:2;min-width:170px;border-right:1px solid var(--border);}
+.htable{width:100%;border-collapse:collapse;table-layout:fixed;}
+.htable col.col-marker{width:180px;}
+.htable col.col-unit{width:80px;}
+.htable col.col-date{width:120px;}
+.htable th{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);padding:10px 14px;text-align:right;border-bottom:1px solid var(--border);white-space:nowrap;font-weight:400;background:#fff;overflow:hidden;text-overflow:ellipsis;}
+.htable th.hth-marker{text-align:left;position:sticky;left:0;background:#fff;z-index:2;border-right:1px solid var(--border);}
+.htable th.hth-unit{text-align:left;border-right:1px solid var(--border);background:#fff;}
 .htable th.hth-latest{color:var(--ink);font-weight:600;background:rgba(61,122,92,0.04);}
-.htable td{padding:13px 20px;border-bottom:1px solid var(--border);text-align:right;font-family:'DM Mono',monospace;font-size:14px;white-space:nowrap;background:#fff;color:var(--faint);font-weight:400;}
+.htable td{padding:11px 14px;border-bottom:1px solid var(--border);text-align:right;font-family:'DM Mono',monospace;font-size:13px;white-space:nowrap;background:#fff;color:var(--faint);font-weight:400;overflow:hidden;text-overflow:ellipsis;}
 .htable td.htd-marker{text-align:left;position:sticky;left:0;background:#fff;z-index:1;border-right:1px solid var(--border);color:var(--ink);}
-.htable td.htd-latest{background:rgba(61,122,92,0.04);font-size:16px;font-weight:600;color:var(--ink);}
+.htable td.htd-latest{background:rgba(61,122,92,0.04);font-size:14px;font-weight:600;color:var(--ink);}
 .htable tr:hover td{background:rgba(240,237,228,0.6)!important;}
 .htable tr:last-child td{border-bottom:none;}
-.htd-marker-name{font-size:16px;font-weight:500;color:var(--ink);font-family:'DM Sans',sans-serif;}
+.htd-marker-name{font-size:16px;font-weight:500;color:var(--ink);font-family:'Inter',sans-serif;}
 .htd-marker-ref{font-size:10px;color:var(--faint);margin-top:1px;font-family:'DM Mono',monospace;}
 .htd-val{font-weight:inherit;}
 .htd-unit{font-size:12px;color:var(--muted);margin-left:2px;}
@@ -232,7 +251,46 @@ header{display:flex;align-items:center;justify-content:space-between;padding:20p
 .health-ratio-fill{height:100%;background:linear-gradient(90deg,var(--health-orange) 0%,var(--health-orange2) 100%);border-radius:99px;transition:width 0.7s cubic-bezier(0.4,0,0.2,1);}
 /* Blood Results section heading */
 .blood-results-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
-.blood-results-title{font-family:'DM Serif Display',serif;font-size:22px;letter-spacing:-0.01em;font-weight:700;color:var(--ink);}
+.blood-results-title{font-family:'Playfair Display',serif;font-size:22px;letter-spacing:-0.01em;font-weight:700;color:var(--ink);}
+/* Blood Results collapse wrapper */
+.blood-results-collapse-hdr{display:flex;align-items:center;justify-content:space-between;padding:16px 22px;background:#fff;border:1.5px solid var(--border2);border-radius:var(--radius) var(--radius) 0 0;cursor:pointer;user-select:none;transition:background 0.12s;border-bottom:2px solid var(--border2);}
+.blood-results-collapse-hdr:hover{background:var(--cream);}
+/* blood-results-collapse-hdr always open */
+.blood-results-collapse-body{border:1.5px solid var(--border2);border-top:none;border-radius:0 0 var(--radius) var(--radius);padding:24px 0 8px;background:#fff;}
+.blood-results-collapse-body.hidden{display:none;}
+.blood-results-chev{font-size:12px;color:var(--muted);transition:transform 0.2s;}
+.blood-results-collapse-hdr.collapsed .blood-results-chev{transform:rotate(-90deg);}
+/* Unit column in htable */
+.hth-unit{text-align:left;min-width:80px;max-width:100px;width:90px;border-right:1px solid var(--border);background:#fff;font-size:10px;letter-spacing:0.06em;}
+.htd-unit-col{text-align:left;font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);border-right:1px solid var(--border);background:#fff;white-space:nowrap;padding:11px 12px 11px 14px;}
+/* Date column descriptor */
+.hth-descriptor{display:block;font-size:9px;color:var(--green);letter-spacing:0.04em;font-weight:500;text-transform:none;margin-bottom:1px;font-family:'DM Mono',monospace;}
+.hth-date-wrap{display:flex;align-items:center;justify-content:flex-end;gap:5px;}
+.hth-del-btn{background:none;border:none;cursor:pointer;color:var(--faint);font-size:11px;padding:1px 3px;border-radius:3px;line-height:1;transition:color 0.12s,background 0.12s;flex-shrink:0;}
+.hth-del-btn:hover{color:var(--red);background:var(--red-bg);}
+/* Add date button */
+.blood-add-date-row{display:flex;justify-content:flex-end;padding:12px 22px 16px;gap:8px;}
+.blood-add-date-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border:1.5px solid var(--border2);border-radius:8px;background:none;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.04em;color:var(--muted);cursor:pointer;transition:all 0.15s;}
+.blood-add-date-btn:hover{border-color:var(--ink);color:var(--ink);background:var(--cream);}
+/* Hide inline unit spans in data cells — unit is in col 2 */
+.htd-unit{display:none;}
+/* Add Date modal */
+.add-date-overlay{position:fixed;inset:0;background:rgba(28,28,26,0.45);z-index:9000;display:flex;align-items:center;justify-content:center;}
+.add-date-modal{background:#fff;border-radius:var(--radius);padding:32px 36px;width:340px;box-shadow:var(--shadow-lg);display:flex;flex-direction:column;gap:18px;}
+.add-date-modal-title{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--ink);letter-spacing:-0.01em;}
+.add-date-field{display:flex;flex-direction:column;gap:6px;}
+.add-date-field label{font-size:11px;font-weight:600;color:var(--muted);letter-spacing:0.06em;text-transform:uppercase;}
+.add-date-field input[type=date]{width:100%;padding:10px 12px;border:1.5px solid var(--border2);border-radius:10px;font-family:'Inter',sans-serif;font-size:15px;background:var(--cream);color:var(--ink);outline:none;transition:border-color 0.15s;}
+.add-date-field input[type=date]:focus{border-color:var(--ink);background:#fff;}
+.add-date-field input[type=text]{width:100%;padding:10px 12px;border:1.5px solid var(--border2);border-radius:10px;font-family:'Inter',sans-serif;font-size:14px;background:var(--cream);color:var(--ink);outline:none;transition:border-color 0.15s;}
+.add-date-field input[type=text]:focus{border-color:var(--ink);background:#fff;}
+.add-date-field input::placeholder{color:var(--faint);}
+.add-date-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:4px;}
+.add-date-cancel{padding:9px 18px;border:1.5px solid var(--border2);border-radius:8px;background:none;font-family:'Inter',sans-serif;font-size:14px;color:var(--muted);cursor:pointer;transition:all 0.15s;}
+.add-date-cancel:hover{border-color:var(--ink);color:var(--ink);}
+.add-date-confirm{padding:9px 18px;border:none;border-radius:8px;background:var(--ink);font-family:'Inter',sans-serif;font-size:14px;font-weight:600;color:#fff;cursor:pointer;transition:background 0.15s;}
+.add-date-confirm:hover{background:var(--ink2);}
+.add-date-err{font-size:12px;color:var(--red);min-height:16px;}
 /* Marker tooltip — floating, JS-positioned, outside all clipping contexts */
 #sbTooltip{
   position:fixed;
@@ -244,7 +302,7 @@ header{display:flex;align-items:center;justify-content:space-between;padding:20p
   border:1.5px solid #9A9890;
   border-radius:10px;
   box-shadow:0 4px 24px rgba(28,28,26,0.18);
-  font-family:'DM Sans',sans-serif;
+  font-family:'Inter',sans-serif;
   font-size:12.5px;
   line-height:1.55;
   color:#1C1C1A;
@@ -273,9 +331,9 @@ header{display:flex;align-items:center;justify-content:space-between;padding:20p
 .stats-strip{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr 1fr;gap:20px;margin-bottom:36px;}
 .stat-block{padding:30px 30px 26px;border:1.5px solid var(--border2);border-radius:var(--radius);background:#fff;text-align:center;}
 .stat-block.primary{border-color:var(--ink);border-width:2px;}
-.stat-lbl{font-family:'DM Serif Display',serif;font-size:16px;font-weight:700;color:var(--ink);letter-spacing:-0.01em;padding-bottom:12px;margin-bottom:20px;border-bottom:1.5px solid var(--border2);width:100%;text-align:center;}
-.chart-title{font-family:'DM Serif Display',serif;font-size:20px;letter-spacing:-0.01em;font-weight:700;color:var(--ink);margin-bottom:16px;padding-bottom:0;width:100%;text-align:center;}
-.stat-val{font-family:'DM Serif Display',serif;font-size:36px;color:var(--ink);line-height:1;letter-spacing:-0.02em;}
+.stat-lbl{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--ink);letter-spacing:-0.01em;padding-bottom:12px;margin-bottom:20px;border-bottom:1.5px solid var(--border2);width:100%;text-align:center;}
+.chart-title{font-family:'Playfair Display',serif;font-size:20px;letter-spacing:-0.01em;font-weight:700;color:var(--ink);margin-bottom:16px;padding-bottom:0;width:100%;text-align:center;}
+.stat-val{font-family:'Playfair Display',serif;font-size:36px;color:var(--ink);line-height:1;letter-spacing:-0.02em;}
 .stat-block.primary .stat-val{font-size:clamp(34px,4vw,52px);color:var(--wealth-blue);}
 .stat-sub{font-size:11px;color:var(--muted);margin-top:8px;text-align:center;}
 .neg-val{color:var(--wealth-crimson);}
@@ -305,7 +363,7 @@ header{display:flex;align-items:center;justify-content:space-between;padding:20p
 .nw-table th{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);padding:0 0 12px 0;text-align:right;border-bottom:1px solid var(--border);font-weight:500;}
 .nw-table th:first-child{text-align:left;}
 .nw-table td{padding:9px 0;border-bottom:1px solid var(--border);text-align:right;color:var(--ink);font-family:'DM Mono',monospace;font-size:12px;}
-.nw-table td:first-child{text-align:left;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;}
+.nw-table td:first-child{text-align:left;font-family:'Inter',sans-serif;font-size:13px;font-weight:500;}
 .nw-table tr.nw-total-row td{border-top:2px solid var(--border);font-weight:700;padding-top:12px;}
 .nw-table tr.nw-total-row td:first-child{color:var(--ink);}
 .nw-table tr.nw-cat-row td{padding-top:12px;}
@@ -323,13 +381,13 @@ header{display:flex;align-items:center;justify-content:space-between;padding:20p
 #donutSvg{width:360px;height:360px;overflow:visible;}
 .donut-ctr{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none;}
 .donut-ctr-lbl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);}
-.donut-ctr-val{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);line-height:1.2;margin-top:2px;}
+.donut-ctr-val{font-family:'Playfair Display',serif;font-size:24px;color:var(--ink);line-height:1.2;margin-top:2px;}
 /* Liquid net worth bar */
 .liq-bar-wrap{width:100%;margin-top:22px;padding-top:18px;border-top:1px solid var(--border);}
 .liq-bar-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;}
 .liq-bar-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);font-weight:500;}
 .liq-bar-vals{display:flex;gap:16px;align-items:baseline;}
-.liq-amount{font-family:'DM Serif Display',serif;font-size:22px;color:var(--wealth-blue);letter-spacing:-0.01em;}
+.liq-amount{font-family:'Playfair Display',serif;font-size:22px;color:var(--wealth-blue);letter-spacing:-0.01em;}
 .liq-pct{font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);}
 .liq-track{height:8px;background:var(--cream3);border-radius:99px;overflow:hidden;position:relative;}
 .liq-fill{height:100%;background:linear-gradient(90deg,var(--wealth-blue),var(--wealth-blue3));border-radius:99px;transition:width 0.6s cubic-bezier(0.4,0,0.2,1);}
@@ -345,7 +403,7 @@ header{display:flex;align-items:center;justify-content:space-between;padding:20p
 .sp-row:first-of-type{padding-top:0;}
 .sp-lbl{font-size:14px;color:var(--muted);}
 .sp-lbl strong{display:block;font-size:15px;font-weight:600;color:var(--ink);margin-bottom:1px;}
-.sp-val{font-family:'DM Serif Display',serif;font-size:30px;color:var(--ink);letter-spacing:-0.02em;text-align:right;line-height:1;}
+.sp-val{font-family:'Playfair Display',serif;font-size:30px;color:var(--ink);letter-spacing:-0.02em;text-align:right;line-height:1;}
 .sp-val.green{color:var(--green);}
 .sp-val.red{color:var(--red);}
 
@@ -366,7 +424,7 @@ header{display:flex;align-items:center;justify-content:space-between;padding:20p
 .cat-items .item{padding-left:28px;}
 .cat-items .add-row{padding-left:28px;}
 .col-hdr-left{display:flex;align-items:baseline;gap:10px;}
-.col-hdr-title{font-family:'DM Serif Display',serif;font-size:22px;letter-spacing:-0.01em;font-weight:700;}
+.col-hdr-title{font-family:'Playfair Display',serif;font-size:22px;letter-spacing:-0.01em;font-weight:700;}
 .col-hdr-green{color:var(--wealth-blue);}
 .col-hdr-red{color:var(--wealth-crimson);}
 .col-hdr-total{font-family:'DM Mono',monospace;font-size:13px;font-weight:600;}
@@ -381,7 +439,7 @@ header{display:flex;align-items:center;justify-content:space-between;padding:20p
 .add-cat-btn:hover{border-color:var(--ink);color:var(--ink);}
 /* Bottom add-category row */
 .add-cat-row{padding:0;border-top:1px solid var(--border);}
-.add-cat-bottom-btn{background:none;border:1px dashed var(--cream3);border-radius:0 0 var(--radius-sm) var(--radius-sm);color:var(--faint);font-size:13px;font-family:'DM Sans',sans-serif;cursor:pointer;padding:9px 22px;width:100%;text-align:left;transition:all 0.15s;}
+.add-cat-bottom-btn{background:none;border:1px dashed var(--cream3);border-radius:0 0 var(--radius-sm) var(--radius-sm);color:var(--faint);font-size:13px;font-family:'Inter',sans-serif;cursor:pointer;padding:9px 22px;width:100%;text-align:left;transition:all 0.15s;}
 .add-cat-bottom-btn:hover{border-color:var(--muted);color:var(--muted);background:var(--cream);}
 /* Move arrow buttons */
 .move-arrows{display:flex;flex-direction:column;gap:1px;margin-right:4px;}
@@ -430,11 +488,11 @@ header{display:flex;align-items:center;justify-content:space-between;padding:20p
 .item-left{min-width:0;}
 .name-row{cursor:text;}
 .item-name{font-size:14px;color:var(--ink);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.item-name-inp{display:none;width:100%;font-size:14px;font-weight:500;color:var(--ink);font-family:'DM Sans',sans-serif;background:none;border:none;border-bottom:1.5px solid var(--ink);outline:none;padding:1px 0;}
+.item-name-inp{display:none;width:100%;font-size:14px;font-weight:500;color:var(--ink);font-family:'Inter',sans-serif;background:none;border:none;border-bottom:1.5px solid var(--ink);outline:none;padding:1px 0;}
 .name-row.editing .item-name{display:none;}
 .name-row.editing .item-name-inp{display:block;}
 .item-note-text{font-size:12px;color:var(--muted);margin-top:2px;font-style:italic;word-break:break-word;}
-.item-note-inp{display:none;width:100%;font-size:12px;color:var(--muted);font-style:italic;font-family:'DM Sans',sans-serif;background:none;border:none;border-bottom:1px dashed var(--faint);outline:none;padding:2px 0;margin-top:3px;}
+.item-note-inp{display:none;width:100%;font-size:12px;color:var(--muted);font-style:italic;font-family:'Inter',sans-serif;background:none;border:none;border-bottom:1px dashed var(--faint);outline:none;padding:2px 0;margin-top:3px;}
 .item-note-inp:focus{border-bottom-color:var(--ink);}
 .note-row{cursor:text;}
 .note-row.editing .item-note-text{display:none;}
@@ -466,7 +524,7 @@ select.cur-tag{padding-right:6px;}
 .item-del{background:none;border:none;cursor:pointer;color:var(--faint);font-size:14px;padding:4px;border-radius:4px;display:flex;align-items:center;justify-content:center;transition:color 0.15s,background 0.15s;align-self:center;}
 .item-del:hover{color:var(--red);background:var(--red-bg);}
 .add-row{padding:9px 22px 9px 67px;border-top:1px solid var(--border);}
-.add-btn{background:none;border:1px dashed var(--cream3);border-radius:6px;color:var(--faint);font-size:13px;font-family:'DM Sans',sans-serif;cursor:pointer;padding:7px 14px;width:100%;text-align:left;transition:all 0.15s;}
+.add-btn{background:none;border:1px dashed var(--cream3);border-radius:6px;color:var(--faint);font-size:13px;font-family:'Inter',sans-serif;cursor:pointer;padding:7px 14px;width:100%;text-align:left;transition:all 0.15s;}
 .add-btn:hover{border-color:var(--muted);color:var(--muted);background:var(--cream);}
 
 /* ── MODAL ── */
@@ -474,15 +532,15 @@ select.cur-tag{padding-right:6px;}
 .modal-ov.open{opacity:1;pointer-events:all;}
 .modal{background:#fff;border-radius:var(--radius);padding:32px;width:380px;box-shadow:var(--shadow-lg);transform:translateY(12px);transition:transform 0.2s;}
 .modal-ov.open .modal{transform:translateY(0);}
-.modal h3{font-family:'DM Serif Display',serif;font-size:22px;margin-bottom:20px;color:var(--ink);}
+.modal h3{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:20px;color:var(--ink);}
 .mfield{margin-bottom:14px;}
 .mfield label{display:block;font-size:11px;color:var(--muted);margin-bottom:5px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;}
-.mfield input,.mfield select{width:100%;padding:10px 12px;border:1.5px solid var(--border2);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:14px;background:var(--cream);color:var(--ink);outline:none;transition:border-color 0.15s;}
+.mfield input,.mfield select{width:100%;padding:10px 12px;border:1.5px solid var(--border2);border-radius:8px;font-family:'Inter',sans-serif;font-size:14px;background:var(--cream);color:var(--ink);outline:none;transition:border-color 0.15s;}
 .mfield input:focus,.mfield select:focus{border-color:var(--ink);background:#fff;}
 .mactions{display:flex;gap:10px;justify-content:flex-end;margin-top:20px;}
-.mbtn-c{padding:10px 18px;border-radius:8px;border:1.5px solid var(--border2);background:#fff;color:var(--muted);cursor:pointer;font-size:13px;font-family:'DM Sans',sans-serif;transition:all 0.15s;}
+.mbtn-c{padding:10px 18px;border-radius:8px;border:1.5px solid var(--border2);background:#fff;color:var(--muted);cursor:pointer;font-size:13px;font-family:'Inter',sans-serif;transition:all 0.15s;}
 .mbtn-c:hover{border-color:var(--ink);color:var(--ink);}
-.mbtn-ok{padding:10px 20px;border-radius:8px;border:none;background:var(--ink);color:#fff;cursor:pointer;font-size:13px;font-family:'DM Sans',sans-serif;font-weight:600;transition:background 0.15s;}
+.mbtn-ok{padding:10px 20px;border-radius:8px;border:none;background:var(--ink);color:#fff;cursor:pointer;font-size:13px;font-family:'Inter',sans-serif;font-weight:600;transition:background 0.15s;}
 .mbtn-ok:hover{background:var(--ink2);}
 
 /* ── FX STATUS ── */
@@ -557,7 +615,7 @@ select.cur-tag{padding-right:6px;}
 .mob-nav-btn{
   flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
   gap:3px;padding:7px 4px;border:none;background:none;cursor:pointer;
-  font-family:'DM Sans',sans-serif;font-size:10px;font-weight:500;
+  font-family:'Inter',sans-serif;font-size:10px;font-weight:500;
   color:var(--muted);transition:color 0.15s;-webkit-tap-highlight-color:transparent;
   border-radius:0;
 }
@@ -775,7 +833,7 @@ select.cur-tag{padding-right:6px;}
 .profile-container{max-width:860px;margin:0 auto;padding:44px 52px 80px;}
 .profile-section{background:#fff;border:1.5px solid var(--border2);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:28px;overflow:hidden;}
 .profile-section-hdr{padding:22px 28px 20px;border-bottom:1.5px solid var(--border);}
-.profile-section-title{font-family:"DM Serif Display",serif;font-size:19px;font-weight:700;color:var(--ink);letter-spacing:-0.01em;}
+.profile-section-title{font-family:"Playfair Display",serif;font-size:19px;font-weight:700;color:var(--ink);letter-spacing:-0.01em;}
 .profile-section-sub{font-size:12px;color:var(--muted);margin-top:3px;}
 .profile-body{padding:24px 28px;}
 .profile-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;}
@@ -784,10 +842,10 @@ select.cur-tag{padding-right:6px;}
 .profile-row:last-child{margin-bottom:0;}
 .pf-field{display:flex;flex-direction:column;gap:6px;}
 .pf-label{font-size:11px;font-weight:600;color:var(--muted);letter-spacing:0.07em;text-transform:uppercase;}
-.pf-input{padding:11px 14px;border:1.5px solid var(--border2);border-radius:10px;font-family:"DM Sans",sans-serif;font-size:14px;background:var(--cream);color:var(--ink);outline:none;transition:border-color 0.15s,background 0.15s;width:100%;}
+.pf-input{padding:11px 14px;border:1.5px solid var(--border2);border-radius:10px;font-family:"Inter",sans-serif;font-size:14px;background:var(--cream);color:var(--ink);outline:none;transition:border-color 0.15s,background 0.15s;width:100%;}
 .pf-input:focus{border-color:var(--ink);background:#fff;}
 .pf-input:read-only{opacity:0.55;cursor:default;}
-.pf-save-btn{padding:11px 28px;border:none;border-radius:10px;background:var(--ink);color:#fff;font-family:"DM Sans",sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:background 0.15s;margin-top:6px;}
+.pf-save-btn{padding:11px 28px;border:none;border-radius:10px;background:var(--ink);color:#fff;font-family:"Inter",sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:background 0.15s;margin-top:6px;}
 .pf-save-btn:hover{background:var(--ink2);}
 .pf-msg{font-size:12px;margin-top:8px;min-height:16px;}
 .pf-msg.ok{color:var(--green);}
@@ -805,7 +863,7 @@ select.cur-tag{padding-right:6px;}
 .danger-row{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-radius:10px;background:var(--cream);border:1px solid var(--border);}
 .danger-row-text strong{display:block;font-size:14px;font-weight:600;color:var(--ink);}
 .danger-row-text span{font-size:12px;color:var(--muted);}
-.danger-btn{padding:8px 18px;border:1.5px solid var(--red-border);border-radius:8px;background:none;color:var(--red);font-size:13px;font-family:"DM Sans",sans-serif;font-weight:600;cursor:pointer;transition:all 0.15s;white-space:nowrap;}
+.danger-btn{padding:8px 18px;border:1.5px solid var(--red-border);border-radius:8px;background:none;color:var(--red);font-size:13px;font-family:"Inter",sans-serif;font-weight:600;cursor:pointer;transition:all 0.15s;white-space:nowrap;}
 .danger-btn:hover{background:var(--red-bg);}
 /* Back to top */
 #backToTop{position:fixed;bottom:88px;right:28px;z-index:200;display:none;flex-direction:column;align-items:center;gap:3px;background:#fff;border:1.5px solid var(--border2);border-radius:12px;padding:9px 13px;cursor:pointer;box-shadow:0 4px 20px rgba(28,28,26,0.12);transition:opacity 0.2s,transform 0.2s;font-family:"DM Mono",monospace;font-size:10px;color:var(--muted);letter-spacing:0.06em;text-transform:uppercase;}
@@ -815,7 +873,7 @@ select.cur-tag{padding-right:6px;}
 /* Footer */
 .sb-footer{background:var(--cream2);color:var(--muted);margin-top:0;border-top:1px solid var(--border);}
 .sb-footer-inner{max-width:1440px;margin:0 auto;padding:36px 52px 28px;display:grid;grid-template-columns:1.4fr 2fr 1fr;gap:40px;align-items:start;}
-.sb-footer-logo{display:flex;align-items:center;gap:10px;font-family:"DM Serif Display",serif;font-size:20px;color:var(--ink);letter-spacing:-0.02em;margin-bottom:10px;}
+.sb-footer-logo{display:flex;align-items:center;gap:10px;font-family:"Playfair Display",serif;font-size:20px;color:var(--ink);letter-spacing:-0.02em;margin-bottom:10px;}
 .sb-footer-tagline{font-size:12px;color:var(--muted);line-height:1.6;max-width:200px;}
 .sb-footer-disclaimer-title{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink);margin-bottom:8px;font-weight:500;}
 .sb-footer-disclaimer{font-size:11.5px;line-height:1.7;color:var(--muted);}
@@ -892,6 +950,25 @@ select.cur-tag{padding-right:6px;}
       <span class="auth-hero-logo-text">Snowball</span>
     </div>
     <div class="auth-slogan">Life is a<br><em>Snowball.</em></div>
+    <div class="auth-subslogan" style="font-weight:400;">Track your net worth and health stats in one private dashboard — <strong>get rolling today!</strong></div>
+    <div class="auth-pills">
+      <span class="auth-pill"><span class="auth-pill-icon">💰</span>Net worth tracking</span>
+      <span class="auth-pill"><span class="auth-pill-icon">🩸</span>Blood marker history</span>
+      <span class="auth-pill"><span class="auth-pill-icon">🔒</span>Private by design</span>
+    </div>
+    <div class="auth-mini-preview">
+      <div class="auth-mini-stat">
+        <span class="auth-mini-label">Net Worth</span>
+        <span class="auth-mini-value">$284.5K</span>
+        <span class="auth-mini-delta">↑ 4.2% this year</span>
+      </div>
+      <div class="auth-mini-divider"></div>
+      <div class="auth-mini-markers">
+        <div class="auth-mini-marker"><span class="auth-mini-dot" style="background:var(--green);"></span>Cholesterol &nbsp;normal</div>
+        <div class="auth-mini-marker"><span class="auth-mini-dot" style="background:var(--green);"></span>HbA1c &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;normal</div>
+        <div class="auth-mini-marker"><span class="auth-mini-dot" style="background:var(--red);"></span>Vitamin D &nbsp;&nbsp;low</div>
+      </div>
+    </div>
     <div class="auth-quote" id="authQuote"></div>
     <div class="auth-hero-footer">YOUR DATA · YOUR BROWSER · YOUR PRIVACY</div>
   </div>
@@ -968,8 +1045,8 @@ select.cur-tag{padding-right:6px;}
       <nav class="nav-tabs" style="display:flex;align-items:center;gap:2px;">
         <button class="nav-tab" id="navProfile" onclick="switchMainTab('profile')">Profile</button>
         <span style="color:var(--border2);font-size:16px;padding:0 4px;user-select:none;pointer-events:none;">|</span>
-        <button class="nav-tab active" id="navWealth" onclick="switchMainTab('wealth')">Wealth</button>
-        <button class="nav-tab" id="navHealth" onclick="switchMainTab('health')">Health</button>
+        <button class="nav-tab active" id="navHealth" onclick="switchMainTab('health')" class="nav-tab active">Health</button>
+        <button class="nav-tab" id="navWealth" onclick="switchMainTab('wealth')">Wealth</button>
         <div style="width:1px;height:20px;background:var(--border2);margin:0 8px;flex-shrink:0;"></div>
         <span id="uploadNavWrap" style="display:inline-flex;align-items:center;gap:0;">
           <button class="nav-upload-btn" id="navUploadBtn" onclick="handleNavUpload()" title="AI Upload">
@@ -982,7 +1059,7 @@ select.cur-tag{padding-right:6px;}
     <div class="hdr-right">
 
       <!-- WEALTH-ONLY controls -->
-      <div id="wealthControls" style="display:flex;align-items:center;gap:12px;">
+      <div id="wealthControls" style="display:none;align-items:center;gap:12px;">
         <div class="fx-badge" title="FX rates updated daily via ECB"><div class="fx-dot loading" id="fxDot"></div><span id="fxLabel">FX…</span></div>
         <div style="display:flex;align-items:center;gap:8px;">
           <span class="cur-label" style="font-family:'DM Mono',monospace;font-size:11px;color:var(--faint);letter-spacing:0.06em;text-transform:uppercase;">Display in</span>
@@ -1029,7 +1106,7 @@ select.cur-tag{padding-right:6px;}
       </div>
 
       <!-- HEALTH-ONLY controls -->
-      <div id="healthControls" style="display:none;align-items:center;gap:12px;">
+      <div id="healthControls" style="display:flex;align-items:center;gap:12px;">
         <!-- Health units toggle -->
         <div style="display:flex;align-items:center;gap:8px;">
           <span class="cur-label" style="font-family:'DM Mono',monospace;font-size:11px;color:var(--faint);letter-spacing:0.06em;text-transform:uppercase;">Display in</span>
@@ -1068,7 +1145,7 @@ select.cur-tag{padding-right:6px;}
     </div>
   </header>
 
-  <div id="wealthTab" class="tab-pane active">
+  <div id="wealthTab" class="tab-pane">
   <div class="container">
     <!-- STATS STRIP -->
     <div class="stats-strip">
@@ -1209,7 +1286,7 @@ select.cur-tag{padding-right:6px;}
   </div><!-- /wealthTab -->
 
   <!-- ── HEALTH TAB ── -->
-  <div id="healthTab" class="tab-pane">
+  <div id="healthTab" class="tab-pane active">
     <div class="health-container">
 
       <!-- Stats strip — 2fr + 6×1fr matching wealth layout -->
@@ -1303,15 +1380,23 @@ select.cur-tag{padding-right:6px;}
         <div id="healthSummaryText" style="font-size:14px;color:var(--ink);line-height:1.7;"></div>
       </div>
 
-      <!-- Blood Results heading with collapse-all -->
-      <div class="blood-results-hdr">
-        <span class="blood-results-title">Blood Results</span>
-        <div style="display:flex;align-items:center;gap:10px;">
-          <button class="toggle-btn" id="healthCollapseBtn" onclick="toggleAllHealthCats()">Collapse All</button>
-          <div id="healthSubtitle" style="font-size:13px;color:var(--muted);">Hover any row · click ✎ to edit · click row for trend</div>
+      <!-- Blood Results — always open, categories collapse/expand -->
+      <div id="bloodResultsSection" style="margin-bottom:8px;">
+        <div class="blood-results-collapse-hdr" id="bloodResultsHdr">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span class="dot-ind" style="background:var(--health-orange);"></span>
+            <span class="blood-results-title" style="font-size:18px;">Blood Results</span>
+            <span id="bloodResultsBadge" style="font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);"></span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <button class="blood-add-date-btn" onclick="addDateColumn()">&#43; Add Date</button>
+            <button class="toggle-btn" id="healthCollapseBtn" onclick="toggleAllHealthCats()">Expand All</button>
+          </div>
+        </div>
+        <div class="blood-results-collapse-body" id="bloodResultsBody">
+          <div class="health-cats-wrap" id="healthCols" style="padding:8px 0;"></div>
         </div>
       </div>
-      <div class="health-cats-wrap" id="healthCols"></div>
       <div id="healthUploadStatus" style="margin-top:8px;display:none;"></div>
     </div>
   </div><!-- /healthTab -->
@@ -1408,17 +1493,17 @@ select.cur-tag{padding-right:6px;}
         <div class="danger-body">
           <div class="danger-row">
             <div class="danger-row-text">
-              <strong>Clear Wealth Data</strong>
-              <span>Permanently deletes all your assets, liabilities and categories</span>
-            </div>
-            <button class="danger-btn" onclick="clearWealthData()">Clear Wealth</button>
-          </div>
-          <div class="danger-row">
-            <div class="danger-row-text">
               <strong>Clear Health Data</strong>
               <span>Permanently deletes all uploaded lab results and health markers</span>
             </div>
             <button class="danger-btn" onclick="clearHealthDataConfirm()">Clear Health</button>
+          </div>
+          <div class="danger-row">
+            <div class="danger-row-text">
+              <strong>Clear Wealth Data</strong>
+              <span>Permanently deletes all your assets, liabilities and categories</span>
+            </div>
+            <button class="danger-btn" onclick="clearWealthData()">Clear Wealth</button>
           </div>
           <div class="danger-row">
             <div class="danger-row-text">
@@ -1436,11 +1521,11 @@ select.cur-tag{padding-right:6px;}
   <!-- Mobile bottom navigation bar -->
   <nav class="mob-nav" id="mobNav">
     <div class="mob-nav-inner">
-      <button class="mob-nav-btn active" id="mobNavWealth" onclick="switchMainTab('wealth')">
+      <button class="mob-nav-btn" id="mobNavWealth" onclick="switchMainTab('wealth')">
         <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         Wealth
       </button>
-      <button class="mob-nav-btn" id="mobNavHealth" onclick="switchMainTab('health')">
+      <button class="mob-nav-btn active" id="mobNavHealth" onclick="switchMainTab('health')">
         <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
         Health
       </button>
@@ -1501,7 +1586,7 @@ select.cur-tag{padding-right:6px;}
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--faint)" stroke-width="1.5" stroke-linecap="round" style="margin-bottom:10px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
       <div class="upload-zone-text">Drag &amp; drop your file here</div>
       <div class="upload-zone-sub">Supports .xlsx, .xls, .csv, .docx, .doc, .pdf</div>
-      <button onclick="document.getElementById('fileInput').click()" style="margin-top:14px;padding:8px 20px;border:1.5px solid var(--border2);border-radius:8px;background:#fff;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--ink);cursor:pointer;font-weight:500;">Browse Files</button>
+      <button onclick="document.getElementById('fileInput').click()" style="margin-top:14px;padding:8px 20px;border:1.5px solid var(--border2);border-radius:8px;background:#fff;font-family:'Inter',sans-serif;font-size:13px;color:var(--ink);cursor:pointer;font-weight:500;">Browse Files</button>
       <input type="file" id="fileInput" accept=".xlsx,.xls,.csv,.docx,.doc,.pdf" style="display:none">
     </div>
     <div class="upload-status" id="uploadStatus"></div>
@@ -1522,7 +1607,7 @@ select.cur-tag{padding-right:6px;}
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--faint)" stroke-width="1.5" stroke-linecap="round" style="margin-bottom:10px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
       <div class="upload-zone-text">Drag &amp; drop your file here</div>
       <div class="upload-zone-sub">Supports .pdf, .jpg, .png, .xlsx, .csv, .docx</div>
-      <button onclick="document.getElementById('healthFileInput').click()" style="margin-top:14px;padding:8px 20px;border:1.5px solid var(--border2);border-radius:8px;background:#fff;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--ink);cursor:pointer;font-weight:500;">Browse Files</button>
+      <button onclick="document.getElementById('healthFileInput').click()" style="margin-top:14px;padding:8px 20px;border:1.5px solid var(--border2);border-radius:8px;background:#fff;font-family:'Inter',sans-serif;font-size:13px;color:var(--ink);cursor:pointer;font-weight:500;">Browse Files</button>
       <input type="file" id="healthFileInput" accept=".pdf,.xlsx,.xls,.csv,.docx,.doc,.jpg,.jpeg,.png" style="display:none" onchange="onHealthFileChosen(this.files[0])">
     </div>
     <div class="upload-status" id="healthModalStatus"></div>
@@ -2323,7 +2408,7 @@ function renderDonutSimple(svgId, slicesData, total, valId){
       pctT.textContent=(s.portion*100).toFixed(1)+'%'; svg.appendChild(pctT);
       const nameT=document.createElementNS('http://www.w3.org/2000/svg','text');
       nameT.setAttribute('x',lx);nameT.setAttribute('y',ly+9);nameT.setAttribute('text-anchor',anchor);
-      nameT.setAttribute('font-family','DM Sans,sans-serif');nameT.setAttribute('font-size','10');nameT.setAttribute('fill','#7A7870');
+      nameT.setAttribute('font-family','Inter,sans-serif');nameT.setAttribute('font-size','10');nameT.setAttribute('fill','#7A7870');
       nameT.textContent=shortName; svg.appendChild(nameT);
     }
   });
@@ -2444,7 +2529,7 @@ function renderDonut(tA){
       const nameTxt=document.createElementNS('http://www.w3.org/2000/svg','text');
       nameTxt.setAttribute('x',lx); nameTxt.setAttribute('y',ly+9);
       nameTxt.setAttribute('text-anchor',anchor);
-      nameTxt.setAttribute('font-family','DM Sans, sans-serif');
+      nameTxt.setAttribute('font-family','Inter, sans-serif');
       nameTxt.setAttribute('font-size','10');
       nameTxt.setAttribute('fill','#7A7870');
       nameTxt.textContent=shortName;
@@ -3039,7 +3124,7 @@ function applyImport(){
 // ── MAIN TAB SWITCHING ────────────────────────────────────────────────
 function switchMainTab(tab){
   if(tab==='profile') loadProfileTab();
-  ['wealth','health','profile'].forEach(t=>{
+  ['health','wealth','profile'].forEach(t=>{
     const pane=document.getElementById(t+'Tab');
     const nav=document.getElementById('nav'+t.charAt(0).toUpperCase()+t.slice(1));
     if(pane) pane.classList.toggle('active', t===tab);
@@ -3216,8 +3301,91 @@ const CAT_META={
 };
 const CAT_ORDER=['Lipids','Metabolic','Liver','Kidney','Thyroid','Hormones','Blood Count','Vitamins & Minerals','Other'];
 
+// ── BLOOD RESULTS: section always open ───────────────────
+
+// ── DATE DESCRIPTORS ──────────────────────────────────────
+let healthDescriptors={};  // {dateStr: descriptorStr}
+
+// ── ADD / DELETE DATE COLUMNS ─────────────────────────────
+function addDateColumn(){
+  // Set max date to today
+  const todayISO=new Date().toISOString().slice(0,10);
+  const inp=document.getElementById('addDateInput');
+  if(inp){ inp.value=''; inp.max=todayISO; }
+  const desc=document.getElementById('addDateDesc');
+  if(desc) desc.value='';
+  const err=document.getElementById('addDateErr');
+  if(err) err.textContent='';
+  document.getElementById('addDateOverlay').style.display='flex';
+  setTimeout(()=>{ if(inp) inp.focus(); },50);
+}
+
+function closeAddDateModal(){
+  document.getElementById('addDateOverlay').style.display='none';
+}
+
+function confirmAddDate(){
+  const inp=document.getElementById('addDateInput');
+  const err=document.getElementById('addDateErr');
+  const iso=inp?inp.value.trim():'';
+  if(!iso){ err.textContent='Please select a date.'; inp.focus(); return; }
+  // Validate ISO format YYYY-MM-DD
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(iso)){ err.textContent='Invalid date format.'; return; }
+  const parsed=new Date(iso+'T00:00:00');
+  if(isNaN(parsed.getTime())){ err.textContent='Please enter a valid date.'; return; }
+  const existing=getAllDates();
+  if(existing.includes(iso)){ err.textContent='A column for this date already exists.'; return; }
+  const descVal=(document.getElementById('addDateDesc')?.value||'').trim();
+  if(descVal) healthDescriptors[iso]=descVal;
+  if(!healthData['__dates__']) healthData['__dates__']={};
+  healthData['__dates__'][iso]=null;
+  saveHealthData();
+  closeAddDateModal();
+  renderHealthCols();
+}
+
+function deleteDateColumn(dateStr){
+  const allDates=getAllDates();
+  const fmt=d=>{try{return new Date(d).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});}catch{return d;}};
+  if(!confirm(`Delete the column for ${fmt(dateStr)}? All values for this date will be permanently removed.`)) return;
+  // Remove all marker values for this date
+  Object.keys(healthData).forEach(markerId=>{
+    if(healthData[markerId]&&healthData[markerId][dateStr]!==undefined){
+      delete healthData[markerId][dateStr];
+    }
+  });
+  if(healthDescriptors[dateStr]) delete healthDescriptors[dateStr];
+  saveHealthData();
+  renderHealthCols();
+}
+
+// ── BLOOD RESULTS SECTION + CATS TOGGLE ──────────────────
+function toggleBloodAndCats(){
+  const body=document.getElementById('bloodResultsBody');
+  const hdr=document.getElementById('bloodResultsHdr');
+  const btn=document.getElementById('healthCollapseBtn');
+  const isOpen=!body.classList.contains('hidden');
+  if(isOpen){
+    // Collapse all cats then close section
+    document.querySelectorAll('#healthCols .health-cat-section').forEach(el=>el.classList.remove('open'));
+    healthCatsExpanded=false;
+    body.classList.add('hidden');
+    hdr.classList.add('collapsed');
+    bloodResultsOpen=false;
+    if(btn) btn.textContent='Expand All';
+  } else {
+    // Open section and expand all cats
+    body.classList.remove('hidden');
+    hdr.classList.remove('collapsed');
+    bloodResultsOpen=true;
+    document.querySelectorAll('#healthCols .health-cat-section').forEach(el=>el.classList.add('open'));
+    healthCatsExpanded=true;
+    if(btn) btn.textContent='Collapse All';
+  }
+}
+
 // ── COLLAPSE ALL HEALTH CATS ───────────────────────────────
-let healthCatsExpanded=true;
+let healthCatsExpanded=false; // default: categories collapsed, headers visible
 function toggleAllHealthCats(){
   healthCatsExpanded=!healthCatsExpanded;
   document.querySelectorAll('#healthCols .health-cat-section').forEach(el=>{
@@ -3311,7 +3479,33 @@ function setUnitMode(mode){
   unitMode=mode;
   const sel=document.getElementById('unitModeSel');
   if(sel) sel.value=mode;
-  renderHealthCols();
+  updateUnitDisplay();
+}
+
+function updateUnitDisplay(){
+  const sex=healthProps.sex||'M';
+  // Update unit column cells in-place
+  document.querySelectorAll('#healthCols tr[data-marker-id]').forEach(tr=>{
+    const markerId=tr.getAttribute('data-marker-id');
+    const m=MASTER_MARKERS.find(x=>x.id===markerId);
+    if(!m) return;
+    const unit=unitMode==='conv'&&m.alt?m.alt:m.si;
+    // Update unit col
+    const unitTd=tr.querySelector('.htd-unit-col');
+    if(unitTd) unitTd.textContent=unit;
+    // Update each value cell in-place
+    tr.querySelectorAll('td.htd, td.htd-latest').forEach(td=>{
+      if(td.classList.contains('htd-marker')||td.classList.contains('htd-unit-col')) return;
+      if(td.dataset.editing) return;
+      const dateStr=td.getAttribute('data-date');
+      if(!dateStr) return;
+      const siVal=healthData[markerId]?.[dateStr];
+      if(siVal==null) return;
+      const dv=displayVal(m,siVal);
+      const valSpan=td.querySelector('.htd-val');
+      if(valSpan) valSpan.textContent=dv.val;
+    });
+  });
 }
 
 // ── LOOKUP: match a raw lab name to a master marker ────────
@@ -3733,6 +3927,7 @@ RULES:
 
 function clearHealthData(){
   healthData={};
+  healthDescriptors={};
   saveHealthData();
   renderHealthCols();
   renderHealthScore();
@@ -3747,6 +3942,7 @@ function saveHealthData(){
   if(u[me.email]){
     u[me.email].healthData=healthData;
     u[me.email].healthProps=healthProps;
+    u[me.email].healthDescriptors=healthDescriptors;
     setU(u);
   }
 }
@@ -3755,6 +3951,7 @@ function loadHealthData(){
   const u=getU();
   if(!me||!u[me.email]) return;
   if(u[me.email].healthData) healthData=u[me.email].healthData;
+  if(u[me.email].healthDescriptors) healthDescriptors=u[me.email].healthDescriptors||{};
   else if(u[me.email].healthHistory){
     // Migrate old healthHistory format
     const hh=u[me.email].healthHistory;
@@ -3776,20 +3973,20 @@ function loadHealthData(){
 }
 
 function updateHealthSubtitle(){
+  // Subtitle cleared — date count shown in badge only
   const el=document.getElementById('healthSubtitle');
-  if(!el) return;
-  const allDates=getAllDates();
-  if(!allDates.length){
-    el.textContent='';
-  } else {
-    el.textContent=`${allDates.length} test date${allDates.length>1?'s':''} · hover any row · click ✎ to edit · click row for trend`;
-  }
+  if(el) el.textContent='';
 }
 
 // Get all dates across all markers, sorted ascending
 function getAllDates(){
   const dates=new Set();
-  Object.values(healthData).forEach(d=>Object.keys(d).forEach(dt=>dates.add(dt)));
+  Object.entries(healthData).forEach(([markerId,d])=>{
+    Object.entries(d).forEach(([dt,v])=>{
+      // include all dates; __dates__ placeholder can have null values
+      if(dt) dates.add(dt);
+    });
+  });
   return [...dates].sort((a,b)=>{
     if(a==='Unknown') return 1; if(b==='Unknown') return -1;
     return new Date(a)-new Date(b);
@@ -3864,12 +4061,18 @@ function renderHealthCols(){
   const latestDate=allDates[allDates.length-1]||null;
   const sex=healthProps.sex||'M';
 
+  // Update badge
+  const badge=document.getElementById('bloodResultsBadge');
+  if(badge){
+    const total=allDates.length;
+    badge.textContent=total?`${total} date${total>1?'s':''}·`:'No data';
+  }
+
   const iconSvg=cat=>`<svg viewBox="0 0 24 24" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">${CAT_META[cat]?.icon||''}</svg>`;
-  const fmtDate=d=>{if(!d||d==='Unknown') return 'Unknown'; try{return new Date(d).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'2-digit'});}catch{return d;}};
+  const fmtDate=d=>{if(!d||d==='Unknown') return d; try{return new Date(d).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'2-digit'});}catch{return d;}};
 
   el.innerHTML=CAT_ORDER.map(cat=>{
     const markers=MASTER_MARKERS.filter(m=>m.cat===cat);
-    // Count flagged in latest date
     let flagCount=0;
     markers.forEach(m=>{
       const v=healthData[m.id]?.[latestDate];
@@ -3879,62 +4082,71 @@ function renderHealthCols(){
     const badgeCls=flagCount>0?'hcb-flagged':hasAnyData?'hcb-all-normal':'hcb-pending';
     const badgeTxt=flagCount>0?`${flagCount} flagged`:hasAnyData?'All normal':'No data';
 
-    // Date headers
+    // Date headers with descriptor + delete button
     const dateHeaders=allDates.map(d=>{
       const isL=d===latestDate;
-      return `<th class="hth${isL?' hth-latest':''}">${fmtDate(d)}${isL?'<br><span style="font-size:9px;color:var(--green);letter-spacing:0.04em;">LATEST</span>':''}</th>`;
+      const desc=healthDescriptors[d]||'';
+      const dEsc=d.replace(/'/g,"\'");
+      const fmtD=fmtDate(d);
+      return `<th class="hth${isL?' hth-latest':''}" style="min-width:100px;">
+        ${desc?`<span class="hth-descriptor">${desc}</span>`:''}
+        <div class="hth-date-wrap">
+          <span>${fmtD}${isL?'<br><span style="font-size:9px;color:var(--green);letter-spacing:0.04em;">LATEST</span>':''}</span>
+          <button class="hth-del-btn" onclick="event.stopPropagation();deleteDateColumn('${dEsc}')" title="Delete this date column">✕</button>
+        </div>
+      </th>`;
     }).join('');
 
     // Marker rows
     const rows=markers.map(m=>{
       const ref=displayRef(m,sex);
-      const refStr=ref.lo!=null&&ref.hi!=null?`${ref.lo}–${ref.hi} ${ref.unit}`:'';
-      const nameEsc=m.name.replace(/\\/g,'\\\\').replace(/'/g,"\\'").replace(/"/g,'&quot;');
+      const unit=unitMode==='conv'&&m.alt?m.alt:m.si;
+      const nameEsc=m.name.replace(/"/g,'&quot;');
       const aliasStr=m.aliases.length?`<div class="htd-alias">${m.aliases.slice(0,3).join(' · ')}</div>`:'';
 
       const valueCells=allDates.map(d=>{
         const siVal=healthData[m.id]?.[d];
         const isL=d===latestDate;
-        const dEsc=d.replace(/'/g,"\\'");
+        const dEsc=d.replace(/'/g,"\'");
         if(siVal==null){
-          return `<td class="htd${isL?' htd-latest':''} htd-empty"
+          return `<td class="htd${isL?' htd-latest':''} htd-empty" data-date="${d}"
             ondblclick="event.stopPropagation();editHealthCell(this,'${m.id}','${dEsc}')"
-            title="No data — click ✎ to add">
-            —<button class="htd-edit-btn" onclick="event.stopPropagation();editHealthCell(this.closest('td'),'${m.id}','${dEsc}')" title="Add value"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
+            title="Double-click or click ✎ to add value">
+            <span style="color:var(--faint);">—</span><button class="htd-edit-btn" onclick="event.stopPropagation();editHealthCell(this.closest('td'),'${m.id}','${dEsc}')" title="Add value"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
           </td>`;
         }
         const st=evalStatus(m,siVal,sex);
         const dv=displayVal(m,siVal);
         const dotCls=st==='normal'?'htd-dot-normal':st==='high'?'htd-dot-high':st==='low'?'htd-dot-low':'htd-dot-pending';
         const colSt=st==='high'||st==='low'?'color:var(--red);font-weight:700;':st==='normal'?'color:var(--ink);':'color:var(--muted);';
-        return `<td class="htd${isL?' htd-latest':''}" ${isL?`style="${colSt}"`:''}
+        return `<td class="htd${isL?' htd-latest':''}" data-date="${d}" ${isL?`style="${colSt}"`:''}
           title="Click ✎ to edit">
-          <span class="htd-val">${dv.val}</span><span class="htd-unit"> ${dv.unit}</span><span class="htd-dot ${dotCls}"></span><button class="htd-edit-btn" onclick="event.stopPropagation();editHealthCell(this.closest('td'),'${m.id}','${dEsc}')" title="Edit value"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
+          <span class="htd-val">${dv.val}</span><span class="htd-dot ${dotCls}"></span><button class="htd-edit-btn" onclick="event.stopPropagation();editHealthCell(this.closest('td'),'${m.id}','${dEsc}')" title="Edit value"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
         </td>`;
       }).join('');
 
-      // No date columns yet — show empty row
+      // No date columns yet
       if(!allDates.length){
         return `<tr>
           <td class="htd-marker">
             <div class="htd-marker-name">${MARKER_TIPS[m.id]?`<span class="tip-label" data-tip="${MARKER_TIPS[m.id].replace(/"/g,'&quot;')}">${m.name}</span>`:m.name}</div>
             ${aliasStr}
-            ${refStr?`<div class="htd-marker-ref">ref ${refStr}</div>`:''}
           </td>
+          <td class="htd-unit-col">${unit}</td>
         </tr>`;
       }
 
-      return `<tr onclick="if(!event.target.closest('td')?.dataset?.editing)openTrendChart('${m.id}')" style="cursor:pointer;" title="Click for trend chart">
+      return `<tr data-marker-id="${m.id}" onclick="if(!event.target.closest('td')?.dataset?.editing)openTrendChart('${m.id}')" style="cursor:pointer;" title="Click for trend chart">
         <td class="htd-marker">
           <div class="htd-marker-name">${MARKER_TIPS[m.id]?`<span class="tip-label" data-tip="${MARKER_TIPS[m.id].replace(/"/g,'&quot;')}">${m.name}</span>`:m.name}</div>
           ${aliasStr}
-          ${refStr?`<div class="htd-marker-ref">ref ${refStr}</div>`:''}
         </td>
+        <td class="htd-unit-col">${unit}</td>
         ${valueCells}
       </tr>`;
     }).join('');
 
-    return `<div class="health-cat-section open">
+    return `<div class="health-cat-section" data-cat="${cat}">
       <div class="health-cat-head" onclick="this.closest('.health-cat-section').classList.toggle('open')">
         <div class="health-cat-head-left">
           <div class="health-cat-icon">${iconSvg(cat)}</div>
@@ -3949,8 +4161,14 @@ function renderHealthCols(){
       </div>
       <div class="health-cat-body">
         <table class="htable">
+          <colgroup>
+            <col class="col-marker">
+            <col class="col-unit">
+            ${allDates.map(()=>'<col class="col-date">').join('')}
+          </colgroup>
           <thead><tr>
             <th class="hth-marker">Marker</th>
+            <th class="hth-unit">Unit</th>
             ${dateHeaders}
           </tr></thead>
           <tbody>${rows}</tbody>
@@ -4338,7 +4556,7 @@ function anthropicFetch(body, signal){
     body: JSON.stringify(body)
   };
   if(signal) opts.signal = signal;
-  return fetch('/.netlify/functions/anthropic-proxy', opts);
+  return fetch('/.netlify/functions/gemini-proxy', opts);
 }
 
 
@@ -4350,5 +4568,24 @@ function anthropicFetch(body, signal){
 // ── CHECK REMEMBERED SESSION ON LOAD ─────────────────────────────────
 window.addEventListener('DOMContentLoaded',()=>{ checkRemembered(); });
 </script>
+<!-- Add Date Modal -->
+<div id="addDateOverlay" class="add-date-overlay" style="display:none;" onclick="if(event.target===this)closeAddDateModal()">
+  <div class="add-date-modal">
+    <div class="add-date-modal-title">Add Test Date</div>
+    <div class="add-date-field">
+      <label>Date <span style="color:var(--red);">*</span></label>
+      <input type="date" id="addDateInput" max="">
+    </div>
+    <div class="add-date-field">
+      <label>Label <span style="color:var(--faint);font-weight:400;text-transform:none;letter-spacing:0;">(optional — e.g. Pre-surgery, Fasted)</span></label>
+      <input type="text" id="addDateDesc" placeholder="Leave blank to skip" maxlength="40">
+    </div>
+    <div class="add-date-err" id="addDateErr"></div>
+    <div class="add-date-actions">
+      <button class="add-date-cancel" onclick="closeAddDateModal()">Cancel</button>
+      <button class="add-date-confirm" onclick="confirmAddDate()">Add Column</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>
